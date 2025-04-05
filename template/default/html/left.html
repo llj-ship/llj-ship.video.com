@@ -1,0 +1,65 @@
+<section id="intro"><a href="{pboot:sitedomain}" class="logo"><img src="{pboot:sitetplpath}/images/face.jpg"></a>
+      <header>
+        <h2>某某博客</h2>
+        <p>风亦过，花欲落，遍野枯黄尽萧索。</br>
+          天亦短，夜愈寒，冬来秋去，暖春尚晚。</br>
+          烦，烦，烦！</br>
+          世情薄，人情恶，面热心凉谁人错。</br>
+          爱亦完，恨亦瞒，只盼忘却，往昔繁远。</br>
+          难，难，难！</p>
+      </header>
+    </section>
+<dl class="function" id="divContorPanel">
+      <dt style="display:none;"></dt>
+      <dd class="function_c">
+        <div>
+          <p>QQ：{pboot:companyqq}<br />
+          </p>
+          <p>邮箱：{pboot:companyemail}<br />
+          </p>
+          <p><img src="{pboot:companyweixin}" title="二维码" alt="二维码" /></p>
+        </div>
+      </dd>
+    </dl>
+    <dl class="function" id="side-tui-article-item">
+      <dt class="function_t">推荐文章</dt>
+      <dd class="function_c">
+        <div>
+          {pboot:list num=4 scode=* order=visits}
+          <article class="mini-post">
+            <header>
+              <h3><a href="[list:link]">[list:title]</a> </h3>
+              <time class="published" datetime="[list:date style=Y-m-d]">[list:date style=Y-m-d]</time>
+              <a class="author"><img src="{pboot:sitetplpath}/images/dfboy.png" alt="admin"></a> </header>
+          </article>
+          {/pboot:list}
+        </div>
+      </dd>
+    </dl>
+    <dl class="function" id="side-hot-view-item">
+      <dt class="function_t">热门文章</dt>
+      <dd class="function_c">
+        <ul>
+          {pboot:list num=4 scode=* order=date}
+          <li>
+            <article>
+              <header>
+                <h3><a href="[list:link]">[list:title]</a></h3>
+                <time class="published" datetime="[list:date style=Y-m-d]">[list:date style=Y-m-d]</time>
+              </header>
+            </article>
+          </li>
+          {/pboot:list}
+        </ul>
+      </dd>
+    </dl>
+    <dl class="function" id="divTags">
+      <dt class="function_t">标签列表</dt>
+      <dd class="function_c">
+        <ul>
+          {pboot:tags}
+          <li><a href="[tags:link]">[tags:text]</a></li>
+          {/pboot:tags}
+        </ul>
+      </dd>
+    </dl>
